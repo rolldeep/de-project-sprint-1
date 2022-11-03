@@ -48,14 +48,15 @@
 6. В результирующей таблице выводим необходимые поля.
 
 ### Необходимые поля для расчёта витрины
-Таблица - orders; Поля - user_id ,order_id, order_ts, payment
-current_date
+Таблица - orders;
+Поля - user_id ,order_id, order_ts, payment, current_date
+
 Рассчётные поля:
-delta_dt = current_date - cast(order_ts as date)	--дельта в днях с момента заказа;
-max_dt = max(order_ts) over (partition by user_id)	--последная дата заказа по каждому пользователю;
-recency = delta_dt;
-frequency = count(distinct order_id)				--кол-во заказвов по каждому пользователю;
-monetary = sum(payment)								--оплаченная сумма всех заказво по каждому пользователю;
+- delta_dt = current_date - cast(order_ts as date)	--дельта в днях с момента заказа;
+- max_dt = max(order_ts) over (partition by user_id)	--последная дата заказа по каждому пользователю;
+- recency = delta_dt;
+- frequency = count(distinct order_id)				--кол-во заказвов по каждому пользователю;
+- monetary = sum(payment)								--оплаченная сумма всех заказво по каждому пользователю;
 
 
 
