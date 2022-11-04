@@ -20,7 +20,7 @@ left join	analysis.tmp_rfm_recency as r on u.user_id = r.user_id
 | 4       | 4       | 3         | 3
 | 5       | 5       | 5         | 5
 | 6       | 1       | 3         | 5
-| 7	      | 4       | 2         | 2
+| 7       | 4       | 2         | 2
 | 8       | 1       | 1         | 3
 | 9       | 1       | 2         | 2
 | 10      | 3       | 4         | 2
