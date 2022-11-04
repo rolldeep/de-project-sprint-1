@@ -32,9 +32,9 @@
 | production.Orderitems | order_id int4 NOT NULL FOREIGN KEY | Внешний ключ | Должен соответствовать order_id из orders |
 | production.Orderitems | order_id, product_id UNIQUE | Ограничения уникальности | Данные в столбцах  уникальны среди всех строк таблицы |
 | production.Orders | order_id int4 NOT NULL PRIMARY KEY | Первичный ключ | Обеспечивает уникальность записей о заказах |
-| production.Orders | "cost" numeric(19, 5) NOT NULL DEFAULT 0 CHECK | Ограничение-проверка | Сost = payment + bonus_payment |
+| production.Orders | cost numeric(19, 5) NOT NULL DEFAULT 0 CHECK | Ограничение-проверка | Сost = payment + bonus_payment |
 | production.Orderstatuses | id int4 NOT NULL PRIMARY KEY | Первичный ключ  | Обеспечивает уникальность записей о название статуса |
-| production.Orderstatuslog | id int4 NOT NULL GENERATED ALWAYS AS IDENTITY, PRIMARY KEY | Первичный ключ  | Обеспечивает уникальность записей о статусе заказа |
+| production.Orderstatuslog | id int4 NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY | Первичный ключ  | Обеспечивает уникальность записей о статусе заказа |
 | production.Orderstatuslog | order_id, status_id UNIQUE | Ограничения уникальности | Данные в столбцах  уникальны среди всех строк таблицы |
 | production.Orderstatuslog | order_id int4 NOT NULL FOREIGN KEY | Внешний ключ | Должен соответствовать order_id из orders |
 | production.Orderstatuslog | status_id int4 NOT NULL FOREIGN KEY | Внешний ключ | Должен соответствовать id из orderstatuses |
