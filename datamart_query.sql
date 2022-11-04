@@ -12,8 +12,7 @@ left join	analysis.tmp_rfm_frequency as f on u.user_id = f.user_id
 left join	analysis.tmp_rfm_monetary_value as m on u.user_id = m.user_id
 left join	analysis.tmp_rfm_recency as r on u.user_id = r.user_id
 ---------------------------------------------------------------------------------------
-| user_id             | recency                      | frequency      | monetary_value |
-| ------------------- | --------------------------- | --------------- | --------------------- |
+| user_id | recency | frequency | monetary_value |
 | 0 | 1 | 3 | 4 |
 | 1 | 4 | 3 | 3 |
 | 2 | 2 | 3 | 5 |
